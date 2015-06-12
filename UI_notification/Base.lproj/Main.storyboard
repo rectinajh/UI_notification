@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5GT-O1-ZdF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--拨号纪录-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,9 +17,125 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="拨号纪录" id="arh-Kh-TpF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="903" y="399"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kKD-Vz-1ea">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5GT-O1-ZdF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="EvJ-Pm-vuH">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="jfX-iT-XDq"/>
+                        <segue destination="DXi-uq-p1t" kind="relationship" relationship="viewControllers" id="LgE-q6-kYm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tg7-h0-sGx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="399"/>
+        </scene>
+        <!--拨号界面-->
+        <scene sceneID="wmS-c8-Mtv">
+            <objects>
+                <viewController id="oyk-qU-LXY" customClass="CallViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LgT-KW-fSX"/>
+                        <viewControllerLayoutGuide type="bottom" id="jWx-Ij-xcW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fix-CU-ceg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2o-zQ-E4l">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lST-Fj-mML"/>
+                                    <constraint firstAttribute="width" constant="30" id="sFY-vT-FYt"/>
+                                </constraints>
+                                <state key="normal" title="拨号">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="mn1-QD-ddn" kind="push" id="Hma-2h-FbB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="A2o-zQ-E4l" secondAttribute="centerX" id="Mw8-OB-EDG"/>
+                            <constraint firstAttribute="centerY" secondItem="A2o-zQ-E4l" secondAttribute="centerY" id="dw8-EU-FGQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="拨号界面" id="4Gn-ka-fah"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MtG-Kg-0gm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="1178"/>
+        </scene>
+        <!--通话界面-->
+        <scene sceneID="0xn-Ce-sn5">
+            <objects>
+                <viewController id="mn1-QD-ddn" customClass="DialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZYn-kc-hfm"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hw0-zc-op3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SJS-PD-wK3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceI-Ej-F55">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="3ar-2h-5iv"/>
+                                    <constraint firstAttribute="height" constant="30" id="bft-Jy-zqw"/>
+                                </constraints>
+                                <state key="normal" title="挂掉">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="hangDownEvent:" destination="mn1-QD-ddn" eventType="touchUpInside" id="H5F-dZ-JoO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="ceI-Ej-F55" secondAttribute="centerY" id="MOZ-mB-wX5"/>
+                            <constraint firstAttribute="centerX" secondItem="ceI-Ej-F55" secondAttribute="centerX" id="xxx-FL-Oyf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="通话界面" id="IFl-BQ-gHv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46W-LI-2df" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661" y="1178"/>
+        </scene>
+        <!--拨号-->
+        <scene sceneID="qXF-C6-Uze">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DXi-uq-p1t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="拨号" id="iVh-lf-6WF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uzV-PN-Qg1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oyk-qU-LXY" kind="relationship" relationship="rootViewController" id="4oU-T1-GRr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fh-rg-Vv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="1178"/>
         </scene>
     </scenes>
 </document>

@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		2482A9ED1B2A6886008FE18A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2482A9EC1B2A6886008FE18A /* main.m */; };
 		2482A9F01B2A6886008FE18A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2482A9EF1B2A6886008FE18A /* AppDelegate.m */; };
-		2482A9F31B2A6886008FE18A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2482A9F21B2A6886008FE18A /* ViewController.m */; };
+		2482A9F31B2A6886008FE18A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2482A9F21B2A6886008FE18A /* RootViewController.m */; };
 		2482A9F61B2A6886008FE18A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2482A9F41B2A6886008FE18A /* Main.storyboard */; };
 		2482A9F81B2A6886008FE18A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2482A9F71B2A6886008FE18A /* Images.xcassets */; };
 		2482A9FB1B2A6886008FE18A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2482A9F91B2A6886008FE18A /* LaunchScreen.xib */; };
 		2482AA071B2A6886008FE18A /* UI_notificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2482AA061B2A6886008FE18A /* UI_notificationTests.m */; };
+		2482AA471B2A7C04008FE18A /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2482AA461B2A7C04008FE18A /* CallViewController.m */; };
+		2482AA4A1B2A867F008FE18A /* DialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2482AA491B2A867F008FE18A /* DialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +34,18 @@
 		2482A9EC1B2A6886008FE18A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2482A9EE1B2A6886008FE18A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2482A9EF1B2A6886008FE18A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2482A9F11B2A6886008FE18A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2482A9F21B2A6886008FE18A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2482A9F11B2A6886008FE18A /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		2482A9F21B2A6886008FE18A /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2482A9F51B2A6886008FE18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2482A9F71B2A6886008FE18A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2482A9FA1B2A6886008FE18A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2482AA001B2A6886008FE18A /* UI_notificationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UI_notificationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2482AA051B2A6886008FE18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2482AA061B2A6886008FE18A /* UI_notificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UI_notificationTests.m; sourceTree = "<group>"; };
+		2482AA451B2A7C04008FE18A /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
+		2482AA461B2A7C04008FE18A /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
+		2482AA481B2A867F008FE18A /* DialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialViewController.h; sourceTree = "<group>"; };
+		2482AA491B2A867F008FE18A /* DialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +89,13 @@
 			children = (
 				2482A9EE1B2A6886008FE18A /* AppDelegate.h */,
 				2482A9EF1B2A6886008FE18A /* AppDelegate.m */,
-				2482A9F11B2A6886008FE18A /* ViewController.h */,
-				2482A9F21B2A6886008FE18A /* ViewController.m */,
+				2482A9F11B2A6886008FE18A /* RootViewController.h */,
+				2482A9F21B2A6886008FE18A /* RootViewController.m */,
 				2482A9F41B2A6886008FE18A /* Main.storyboard */,
+				2482AA481B2A867F008FE18A /* DialViewController.h */,
+				2482AA491B2A867F008FE18A /* DialViewController.m */,
+				2482AA451B2A7C04008FE18A /* CallViewController.h */,
+				2482AA461B2A7C04008FE18A /* CallViewController.m */,
 				2482A9F71B2A6886008FE18A /* Images.xcassets */,
 				2482A9F91B2A6886008FE18A /* LaunchScreen.xib */,
 				2482A9EA1B2A6886008FE18A /* Supporting Files */,
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2482A9F31B2A6886008FE18A /* ViewController.m in Sources */,
+				2482A9F31B2A6886008FE18A /* RootViewController.m in Sources */,
+				2482AA4A1B2A867F008FE18A /* DialViewController.m in Sources */,
 				2482A9F01B2A6886008FE18A /* AppDelegate.m in Sources */,
+				2482AA471B2A7C04008FE18A /* CallViewController.m in Sources */,
 				2482A9ED1B2A6886008FE18A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +430,7 @@
 				2482AA0C1B2A6886008FE18A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2482AA0D1B2A6886008FE18A /* Build configuration list for PBXNativeTarget "UI_notificationTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				2482AA0F1B2A6886008FE18A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
